@@ -10,7 +10,7 @@ const Count = () => {
         if(increment<10){
         setIncrement(increment + 1);
         }else{
-           alert ("you can't increment")
+            alert ("you can't increment")
         }
     }
     const Decrement = () => { 
