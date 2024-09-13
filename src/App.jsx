@@ -17,6 +17,9 @@ import Search from "./UseState/Search";
 // import Counter from './useReducer/Counter'
 // import Colour from "./UseReducer/ColourChange";
 import Country from "./useReducer/Capital"
+import { Route,BrowserRouter as Router,Routes } from "react-router-dom";
+import Params from "./Params/Params";
+import Params1 from "./Params/Params1";
 
 function App() {
   return (
@@ -34,7 +37,15 @@ function App() {
       <Search/> */}
       {/* <Counter/> */}
       {/* <Colour /> */}
-      <Country/>
+      {/*<Country/>*/}
+
+      <Router>
+        <Routes>
+
+        <Route path = {"/"} element = {<Params/>}/>
+        <Route path = {"/params/:id"} element = {<Params1/>}/>
+        </Routes>
+      </Router>
 
     </>
   );

@@ -6,12 +6,12 @@ const counterReducer = (state, action) => {
       if (state?.count < 10) {
         return { count: (state?.count ) + 1 };
       } else {
-       
+
         return state;
       }
     } else if (action.type === "DECREMENT") {
       return { count: (state?.count || 0) - 1 };
-     
+    
     } else if (action.type === "RESET") {
       return { count: 0 };
     } else {
