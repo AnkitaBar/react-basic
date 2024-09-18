@@ -20,6 +20,9 @@ import Country from "./useReducer/Capital"
 import { Route,BrowserRouter as Router,Routes } from "react-router-dom";
 import Params from "./Params/Params";
 import Params1 from "./Params/Params1";
+import ParamsProducts from "./Params/ParamsProducts";
+import ProductDetails from "./Params/ProductDetails";
+import ProductListings from "./Params/ProductListings";
 
 function App() {
   return (
@@ -39,11 +42,25 @@ function App() {
       {/* <Colour /> */}
       {/*<Country/>*/}
 
-      <Router>
+      {/* <Router>
         <Routes>
 
         <Route path = {"/"} element = {<Params/>}/>
         <Route path = {"/params/:id"} element = {<Params1/>}/>
+        </Routes>
+      </Router> */}
+
+      {/* <Router>
+        <Routes>
+          <Route path="/" element={<ParamsProducts />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+        </Routes>
+      </Router> */}
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<ProductListings />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
       </Router>
 
