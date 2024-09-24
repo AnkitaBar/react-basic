@@ -23,6 +23,9 @@ import Params1 from "./Params/Params1";
 import ParamsProducts from "./Params/ParamsProducts";
 import ProductDetails from "./Params/ProductDetails";
 import ProductListings from "./Params/ProductListings";
+import About from "./useContext/About";
+import NoteContex from "./useContext/NoteContext";
+import Notestate from "./useContext/NoteState";
 
 function App() {
   return (
@@ -57,12 +60,21 @@ function App() {
         </Routes>
       </Router> */}
 
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<ProductListings />} />
           <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
+      </Router> */}
+
+      {/* ///////////////useContext/////////////////////// */}
+<Notestate>
+      <Router>
+        <Routes>
+          <Route path="/" element={<About />} />
+        </Routes>
       </Router>
+      </Notestate>
 
     </>
   );
